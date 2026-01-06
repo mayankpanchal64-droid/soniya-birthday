@@ -134,6 +134,7 @@
 <div class="page active" id="page1">
   <h1>This page is crafted for you 💖</h1>
   <p>Soniya, let’s unpack something special together ✨</p>
+  <button id=yesButton">Yes</button>
   <button onclick="goToPage(2)">Yes</button>
   <script>
 document.getElementById("yesButton").addEventListener("click", function() {
@@ -150,6 +151,15 @@ document.getElementById("yesButton").addEventListener("click", function() {
   <audio id="birthdaySong" src="song.mp3"></audio>
   <img src="cake.png" class="cake" onclick="goToPage(3)" />
   <p>(Tap the cake 🎂)</p>
+  <script>
+const yesButton = document.getElementById("yesButton");
+const birthdaySong = document.getElementById("birthdaySong");
+
+yesButton.addEventListener("click", function() {
+    birthdaySong.play();         // Play the song
+    goToPage(2);                 // Go to Page 2
+});
+</script>
 </div>
 
 <!-- PAGE 3 -->
@@ -208,6 +218,7 @@ function launchFireworks() {
 
 </body>
 </html>
+
 
 
 
